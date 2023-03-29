@@ -4,3 +4,4 @@ this is agent 1
 this is agent 1
 testing jenkins labels
 testing maven build bt installing maven in jenkins master
+testing maven build bt installing maven in jenkins slave
