@@ -13,11 +13,17 @@ pipeline {
       stage ('scm-checkout') {
          steps {
             checkout scmGit(branches: [[name: '*/feat01']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-creds-jyothika', url: 'https://github.com/whatsapp-jyo/mavenrepo.git']])
-            sh 'cat Jenkinsfile'
+            sh ' echo "my first pipeline" '
           }
 
       }
+      
+      stage ('mvn build') {
+          steps{
+              sh ' mvn package '
+            }
 
+      }
 
    }         //all stages complete here
 
